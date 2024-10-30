@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-size: 16px;
+  /* word-spacing: 10px; */
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 20px;
+  color: rgba(98, 20, 97, 0.669);
+  font-weight: 400;
+  text-shadow: 0 4px 7px black;
+  text-transform: uppercase;
+}
+
+#featured {
+  background-color: rgb(255, 166, 0);
+  font-size: 20px;
+}
+
+.tag {
+  text-decoration: none;
+  background-color: rgb(209, 39, 39);
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: whitesmoke;
+}
+
+.cast {
+  list-style-type: none;
+}
