@@ -66,4 +66,8 @@ ol > li {
   border: 1px solid blue;
 }
 
-/* COMPOUND SELECTORS / CHAINING SELECTORS */
+/* COMPOUND SELECTORS / CHAINING SELECTORS - Selects h2 that have the class of score */
+
+h2.score {
+  color: blueviolet;
+}
