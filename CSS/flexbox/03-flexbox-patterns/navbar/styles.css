@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+  /* Temporary height */
+  /* height: 70px; */
+}
+
+.move-right {
+  margin-left: auto;
+}
+.nav-link {
+  color: #14a700;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .move-right {
+    margin-left: 0;
+  }
+}
