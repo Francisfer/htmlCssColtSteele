@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background: linear-gradient(to top right, #1e4b1e, #00ff00);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: rgb(202, 164, 209);
+  font-family: sans-serif;
+  font-size: 5rem;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
