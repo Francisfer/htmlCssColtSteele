@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(to right top, #410404, #e63c3cb8);
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+.card {
+  width: 400px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom left, #53e116, #b6f889b8);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--heading {
+  align-self: center;
+}
+
+.card--footer {
+  margin-top: auto;
+}
