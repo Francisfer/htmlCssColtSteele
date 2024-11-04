@@ -1,0 +1,88 @@
+body {
+  font-family: sans-serif;
+  background-color: #150404;
+  color: #fdebeb;
+}
+
+/* 
+Absolute units - px
+
+Relative units:
+
+% 
+- Percentages are always relative to some other value. Sometimes they are relative to the parent and other times they are relative to the element itself.
+
+-> If we set the width of an element to 50%, that's half of the width of it's parent element.
+
+-> On the other example, if we set the line-height to be 50%, that is half of the font-size of the element itself.
+
+*/
+
+.line-height {
+  font-size: 50px;
+  line-height: 120%;
+}
+
+.container {
+  border: 1px solid greenyellow;
+  height: 500px;
+  width: 500px;
+}
+
+.box {
+  background-color: #3d3d3d;
+  height: 50%;
+  width: 50%;
+}
+
+/* 
+rem - root ems
+
+- rems are relative to the root html font-size. They are often easier to work with.
+
+- However, for that, we need to change the font-size of the root, which has it's implications. If we change the root to 20px, 1 rem is always 20px.
+
+*/
+
+.rem {
+  font-size: 1rem;
+}
+
+/* 
+em 
+
+- When working with font-size, 1em is equal to the font-size of the parents. 2 em is twice the font-size of the parent (not the root).
+
+- Should not be used with font-size.
+
+- If we set other properties that are not font-size with em, 1 em is equal to the computed font-size of the element itself.
+
+*/
+
+.container-em {
+  font-size: 20px;
+}
+
+.header-em {
+  font-size: 4em;
+}
+
+.header-em-text {
+  font-size: 1.5em;
+}
+
+.em {
+  margin: 0;
+  font-size: 4em;
+  margin-left: 2em;
+}
+
+/* 
+
+vw and vh 
+
+- Both are relative to the size of the viewport.
+
+- They are typically used for larger layout concerns, not font-size or spacing.
+
+*/
