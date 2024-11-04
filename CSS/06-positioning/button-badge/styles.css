@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 1000px;
+  background-color: black;
+  border-bottom: 1px solid rgb(32, 154, 24);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  /* border-inline: 1px solid rgb(32, 154, 24); */
+  border-top: 1px solid rgb(32, 154, 24);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+.btn-badge {
+  font-size: inherit;
+  background-color: rgb(32, 154, 24);
+  height: 1.5em;
+  width: 1.5em;
+  border: 1px solid rgb(137, 225, 4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: whitesmoke;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
