@@ -1,0 +1,129 @@
+body {
+  font-family: sans-serif;
+}
+
+/* UNIVERSAL SELECTOR */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ELEMENT SELECTOR */
+p {
+  color: purple;
+}
+
+/* CLASS SELECTOR */
+.tag {
+  color: orange;
+}
+
+/* ID SELECTOR */
+#featured {
+  color: gold;
+}
+
+/* ATTRIBUTE SELECTOR */
+input[type="number"] {
+  background-color: gold;
+}
+
+/* Fancy attribute selectors - contains, starts with and ends with */
+
+a[href*="wiki"] {
+  color: cyan;
+}
+a[href^="#"] {
+  color: darkviolet;
+}
+a[href$=".org"] {
+  color: green;
+}
+
+/* GROUPING/LIST SELECTOR */
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.score,
+.tag {
+  color: wheat;
+  background-color: orangered;
+}
+
+/* DESCENDANT SELECTOR/COMBINATOR - nested anywhere */
+
+#cast span {
+  color: gray;
+}
+
+/* CHILD SELECTOR/COMBINATOR - Must be a direct child, one level only. We couldn't use color because it would get inherited */
+
+ol > li {
+  border: 1px solid blue;
+}
+
+/* COMPOUND SELECTORS / CHAINING SELECTORS - Selects h2 that have the class of score */
+
+h2.score {
+  color: blueviolet;
+}
+
+/* ADJACENT COMBINATOR - The + combinator selects elements that are immediately after the first element */
+
+h2 + p {
+  color: deeppink;
+}
+
+/* GENERAL SIBLING COMBINATOR - The ~ combinator selects any sibling element, adjacent or not.
+
+The second element must be after the first, immediately or not, and the share the same parent.
+
+It is similar to the adjacent combinator, it just don't care if the second element immediately follows the first.
+*/
+
+h2 ~ p {
+  color: saddlebrown;
+}
+
+/* ///////////////////////PSEUDO-CLASSES/////////////////////// */
+
+h2:hover {
+  color: orange;
+}
+
+/* Inputs */
+
+input:disabled {
+  background-color: red;
+}
+
+/* Links - Location pseudo-classes */
+
+a:visited {
+  color: darkblue;
+}
+
+/* Video . :playing :paused */
+
+/* Tree-structural pseudo-classes */
+
+li:first-of-type {
+  /* The first within each grouping */
+}
+li:last-of-type {
+  /* The last within each grouping */
+}
+
+li:nth-of-type(2) {
+  /* The second within each grouping */
+}
+
+li:nth-of-type(2n) {
+  /* Every second, like odd */
+}
+
+/* User action pseudo-classes :active, :focus */
