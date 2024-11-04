@@ -1,0 +1,58 @@
+body {
+  background-color: black;
+  color: wheat;
+}
+
+/* POSITION STATIC AND RELATIVE */
+
+/*
+p {
+  border: 1px solid whitesmoke;
+  background-color: magenta;
+  margin: 30px;
+  font-size: 2rem;
+}
+
+.position-relative {
+  background-color: yellow;
+  color: black;
+  position: relative;
+  top: -40px;
+  left: 40px;
+  z-index: -1;
+} */
+
+/* POSITION ABSOLUTE */
+
+.sizing {
+  height: 400px;
+  width: 400px;
+  background-color: blueviolet;
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+/* For demonstrating the absolute position when no ancestor has a position defined */
+
+/* .special {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* For demonstrating when a parent has a position defined */
+
+.absolute {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
