@@ -1,0 +1,48 @@
+body {
+  background-color: gray;
+}
+
+/* TRANSITIONS */
+
+/* .btn {
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 30px;
+  transition: background-color 0.5s ease-out 2s, color 0.5s ease-out 2s,
+    transform 0.5s ease-out 2s;
+}
+
+.btn:hover {
+  background-color: orangered;
+  color: whitesmoke;
+  transform: translateX(100px);
+} */
+
+/* TRANSFORMS */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: olivedrab;
+  display: inline-block;
+}
+
+.move {
+  background-color: orangered;
+  /* transform: translateX(400px); */
+  transform: rotate(120deg) scale(2);
+}
+
+.rotate-x {
+  background-color: blue;
+  transform: rotateX(45deg);
+  transform-origin: bottom;
+}
+
+.rotate-y {
+  background-color: blueviolet;
+  transform: rotateY(45deg);
+  transform-origin: right;
+}
