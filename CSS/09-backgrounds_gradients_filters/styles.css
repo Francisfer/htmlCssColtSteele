@@ -1,0 +1,81 @@
+body {
+  background-color: gray;
+}
+
+/* .box {
+  height: 400px;
+  width: 200px;
+  background-image: url("./images/woman.jpg");
+  background-size: cover;
+  background-position: top right;
+} */
+
+/* Clip */
+/* .box {
+  border: 20px dashed orangered;
+  height: 400px;
+  width: 400px;
+  padding: 40px;
+  background-image: url("./images/woman.jpg");
+  background-clip: content-box;
+} */
+
+/* Linear-gradient */
+
+/* .box {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  background-image: linear-gradient(to bottom right, cyan, magenta);
+} */
+
+/* Radial-gradient */
+
+/* .box {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  background-image: Radial-gradient(circle at bottom, cyan, magenta);
+} */
+
+/* Conic gradient */
+
+/* .box {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  background-image: conic-gradient(cyan, magenta, red, cyan);
+} */
+
+/* Repeating linear gradient */
+/* Repeating-conic-gradient */
+
+/* .box {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  background-image: repeating-linear-gradient(45deg, blue, red 33.3%);
+} */
+
+/* Background shorthand */
+
+/* It is confusing to use the shorthand, the only thing to remember is that, if we want to specify the size (150%), it must go after the position (center) separated by a slash (/) */
+
+/* .box {
+  border: 2px solid black;
+  height: 700px;
+  width: 400px;
+  background: url("./images/peacock.png") no-repeat center/150%;
+} */
+
+/* Filters */
+
+.box {
+  border: 2px solid black;
+  height: 700px;
+  width: 700px;
+  background: url("./images/food.jpg");
+  background-size: cover;
+  /* filter: grayscale() contrast(100%); */
+  filter: hue-rotate(180deg);
+}
