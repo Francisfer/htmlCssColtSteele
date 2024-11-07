@@ -30,7 +30,7 @@ h1 {
   margin-inline: 8px;
 }
 
-/* Makes more sense to increase specificity with a with the class of active. 
+/* Makes more sense to increase specificity of a with the class of active. 
 If we use the descendant selector with ul .active that could apply to other places on the page where we have the same strategy.
 
 By giving the underline we can't change the spacing, that is why we choose border bottom.
@@ -102,4 +102,35 @@ This is why we need to set the width of each div to a little less than 50%, so t
 .contact p {
   margin: 0;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 100%;
+  }
+
+  .about {
+    margin: 100px 0 100px 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    padding: 0;
+  }
+
+  .gallery {
+    padding: 8px;
+  }
+
+  h1,
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .about {
+    margin: 100px auto;
+    min-width: 450px;
+  }
 }
