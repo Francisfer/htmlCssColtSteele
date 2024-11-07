@@ -1,0 +1,43 @@
+header,
+footer {
+  background-color: purple;
+  height: 400px;
+}
+
+article {
+  background-color: teal;
+  height: 400px;
+}
+
+aside {
+  background-color: blue;
+  height: 400px;
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    display: flex;
+  }
+
+  article {
+    flex: 3 1 75%;
+  }
+
+  aside {
+    flex: 1 1 25%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  main {
+    display: flex;
+  }
+
+  article {
+    flex: 3 1 80%;
+  }
+
+  aside {
+    flex: 1 1 20%;
+  }
+}
