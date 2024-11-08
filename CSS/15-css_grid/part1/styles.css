@@ -1,0 +1,73 @@
+/* GRID TEMPLATE COLUMNS */
+
+/* .container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 100px;
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+} */
+
+/* GRID TEMPLATE ROWS */
+
+/* .container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+} */
+
+/* THE minmax() FUNCTION */
+
+/* .container {
+  height: 700px;
+  width: 75%;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+} */
+
+/* THE fit-content FUNCTION */
+
+.container {
+  height: 700px;
+  width: 75%;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(3, fit-content(500px));
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
