@@ -1,0 +1,93 @@
+/* Working with grid lines */
+
+/* .container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.first {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  border-radius: 100px;
+}
+
+.second {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  border-radius: 1000px;
+} */
+
+/* Grid Template Areas */
+
+/* .container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    ". header header ."
+    "aside main main main"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer .";
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.first {
+  grid-area: header;
+}
+
+.second {
+  grid-area: aside;
+}
+
+.third {
+  grid-area: main;
+}
+
+.fourth {
+  grid-area: footer;
+} */
+
+/* Grid auto flow - row as default */
+
+.container {
+  height: 700px;
+  width: 80%;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.fit {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
