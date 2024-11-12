@@ -7,6 +7,7 @@
 body {
   background-color: #333;
   font-family: "Poppins", sans-serif;
+  padding: 16px;
 }
 
 .project-grid {
@@ -14,9 +15,16 @@ body {
   grid-template-areas:
     "eth eth alphabet"
     "eth eth traveler"
-    "astro cube traveler";
+    "astro cube traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dimensional"
+    "foam foam dimensional";
+  gap: 16px;
+  width: 100%;
+  max-width: 90%;
 }
-
+/* FIND OUT WHY HE SETS THE WIDTH AND MAX-WIDTH TO 90% - TEST IT */
 #eth {
   grid-area: eth;
 }
@@ -27,6 +35,26 @@ body {
 #traveler {
   grid-area: traveler;
 }
+
+#cube {
+  grid-area: cube;
+}
+#astro {
+  grid-area: astro;
+}
+#cup {
+  grid-area: cup;
+}
+#insta {
+  grid-area: insta;
+}
+#foam {
+  grid-area: foam;
+}
+#dimensional {
+  grid-area: dimensional;
+}
+
 .project {
   position: relative;
 }
