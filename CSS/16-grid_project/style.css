@@ -1,3 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-areas:
+    "eth eth alphabet"
+    "eth eth traveler"
+    "astro cube traveler";
+}
+
+#eth {
+  grid-area: eth;
+}
+
+#alphabet {
+  grid-area: alphabet;
+}
+#traveler {
+  grid-area: traveler;
+}
+.project {
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.project .project-overlay:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
