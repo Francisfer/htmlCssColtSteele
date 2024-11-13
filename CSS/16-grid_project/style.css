@@ -80,6 +80,15 @@ body {
   margin: 3px;
 }
 
+.header .hamburger-btn:hover .bar2 {
+  animation: fadeBar2 1s forwards;
+}
+.header .hamburger-btn:hover .bar1 {
+  animation: rotateBar1 1s forwards linear;
+}
+.header .hamburger-btn:hover .bar3 {
+  animation: rotateBar3 1s forwards linear;
+}
 .project-grid {
   display: grid;
   grid-template-areas:
@@ -194,10 +203,12 @@ body {
     top: 0;
     z-index: 1;
     padding-block: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-  .header .author {
-    font-size: 1rem;
+  .header .author h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
   }
   .project-grid {
     display: grid;
@@ -238,5 +249,35 @@ body {
 
   .project .project-overlay {
     font-size: 24px;
+  }
+}
+@keyframes rotateBar1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg) translate(-0.1px, -4.5px);
+    transform-origin: left;
+  }
+}
+
+@keyframes fadeBar2 {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes rotateBar3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg) translate(0.1px, 4.5px);
+    transform-origin: left;
   }
 }
