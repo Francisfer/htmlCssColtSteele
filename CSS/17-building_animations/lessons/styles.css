@@ -6,8 +6,12 @@
 }
 
 body {
-  background-color: #333;
+  background-color: black;
   color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
@@ -24,6 +28,10 @@ body {
   animation-direction: alternate;
   animation-timing-function: linear; */
   /* animation: spin 3s linear infinite alternate; */
+
+  /* Fill mode */
+  animation: fillMode 2s ease-in-out 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes colorChange {
@@ -76,5 +84,18 @@ body {
   100% {
     transform: translateX(0%);
     background-color: magenta;
+  }
+}
+
+/* Animation fill mode */
+
+@keyframes fillMode {
+  0% {
+    transform: translateX(0);
+    background-color: yellow;
+  }
+  100% {
+    transform: translateX(300px);
+    background-color: teal;
   }
 }
