@@ -5,9 +5,83 @@
 }
 
 body {
-  background-color: #333;
+  background-color: #999;
   font-family: "Poppins", sans-serif;
-  padding: 16px;
+  padding-inline: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0;
+}
+
+.header .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.author .badge {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+.header .navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navigation-link:link,
+.navigation-link:visited {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.navigation-link:hover,
+.navigation-link:active {
+  text-decoration: underline;
+}
+
+.navigation-link-icon {
+  width: 24px;
+  height: auto;
+  display: block;
+  border-bottom: none;
+}
+
+.header .hamburger-btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.header .hamburger-btn > div {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .project-grid {
@@ -22,9 +96,8 @@ body {
     "foam foam dimensional";
   gap: 16px;
   width: 100%;
-  max-width: 90%;
 }
-/* FIND OUT WHY HE SETS THE WIDTH AND MAX-WIDTH TO 90% - TEST IT */
+
 #eth {
   grid-area: eth;
 }
@@ -83,8 +156,78 @@ body {
   transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
+.project-overlay.white {
+  color: #fff;
+}
+
 .project .project-overlay:hover {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.07);
   cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding-block: 64px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .project-grid {
+    display: grid;
+    grid-template-areas:
+      "eth eth"
+      "alphabet traveler"
+      "astro cube"
+      "insta insta"
+      "cup foam "
+      "dimensional dimensional";
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header .navigation {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .project-grid {
+    display: grid;
+    grid-template-areas:
+      "eth eth"
+      "alphabet alphabet"
+      "astro cube"
+      "traveler traveler"
+      "insta insta"
+      "cup cup "
+      "foam foam"
+      "dimensional dimensional";
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .author .badge {
+    display: none;
+  }
+
+  .header .navigation {
+    display: none;
+  }
+
+  .header .hamburger-btn {
+    display: block;
+  }
+
+  .footer {
+    padding-block: 32px;
+    font-size: 14px;
+  }
+
+  .project .project-overlay {
+    font-size: 24px;
+  }
 }
