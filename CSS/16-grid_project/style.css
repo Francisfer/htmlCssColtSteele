@@ -5,9 +5,10 @@
 }
 
 body {
-  background-color: #999;
+  background-color: #000;
   font-family: "Poppins", sans-serif;
-  padding-inline: 1rem;
+  padding-inline: 24px;
+  color: white;
 }
 
 .container {
@@ -17,6 +18,7 @@ body {
 }
 
 .header {
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,30 +60,24 @@ body {
 }
 
 .navigation-link-icon {
-  width: 24px;
-  height: auto;
-  display: block;
-  border-bottom: none;
-}
-
-.header .hamburger-btn {
-  height: 50px;
-  width: 50px;
+  font-size: 23px;
+  color: white;
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  align-items: center;
   justify-content: center;
 }
 
-.hamburger-btn {
+.header .hamburger-btn {
+  width: 50px;
   display: none;
 }
 
 .header .hamburger-btn > div {
-  background-color: black;
+  background-color: white;
   height: 4px;
-  width: 100%;
+  width: 75%;
   border-radius: 10px;
+  margin: 3px;
 }
 
 .project-grid {
@@ -94,7 +90,7 @@ body {
     "cup insta insta"
     "foam foam dimensional"
     "foam foam dimensional";
-  gap: 16px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -193,6 +189,16 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+  }
+  .header .author {
+    font-size: 1rem;
+  }
   .project-grid {
     display: grid;
     grid-template-areas:
@@ -219,7 +225,10 @@ body {
   }
 
   .header .hamburger-btn {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer {
