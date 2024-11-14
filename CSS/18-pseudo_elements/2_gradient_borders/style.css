@@ -9,47 +9,36 @@ body {
   background-color: #333;
 }
 
-hr {
-  margin-block: 2rem;
+.container {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
-h1::before {
-  content: "BEFORE PSEUDO-ELEMENT";
-  color: orangered;
-}
-
-h1::after {
-  content: "AFTER PSEUDO-ELEMENT";
-  color: aliceblue;
-}
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-blockquote {
-  font-size: 1.5rem;
-  padding: 2rem;
-  font-style: italic;
-  color: #999;
+.box {
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid white; */
   position: relative;
 }
 
-blockquote::before {
-  content: open-quote;
-  top: -14px;
-  left: -11px;
-}
-blockquote::after {
-  content: close-quote;
-  bottom: -40px;
-  right: 585px;
-}
-
-blockquote::before,
-blockquote::after {
-  font-size: 6rem;
+.box::before {
+  content: "";
   position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 306px;
+  height: 306px;
+  background: linear-gradient(to bottom right, cyan, magenta);
+  z-index: -1;
 }
