@@ -67,6 +67,10 @@ body {
   justify-content: center;
 }
 
+.mobile-nav-open {
+  transform: translateX(-96px);
+}
+
 .header .hamburger-btn {
   width: 50px;
   display: none;
@@ -75,20 +79,23 @@ body {
 .header .hamburger-btn > div {
   background-color: white;
   height: 4px;
-  width: 75%;
+  width: 36px;
   border-radius: 10px;
   margin: 3px;
 }
 
-.header .hamburger-btn:hover .bar2 {
-  animation: fadeBar2 1s forwards;
+.animateBar1 {
+  animation: rotateBar1 0.3s forwards ease-in-out;
 }
-.header .hamburger-btn:hover .bar1 {
-  animation: rotateBar1 1s forwards linear;
+
+.animateBar2 {
+  animation: fadeBar2 0.3s forwards;
 }
-.header .hamburger-btn:hover .bar3 {
-  animation: rotateBar3 1s forwards linear;
+
+.animateBar3 {
+  animation: rotateBar3 0.3s forwards ease-in-out;
 }
+
 .project-grid {
   display: grid;
   grid-template-areas:
@@ -176,6 +183,11 @@ body {
   padding-block: 64px;
 }
 
+.footer.footer-mobile {
+  text-align: start;
+  font-size: 12px;
+}
+
 @media only screen and (max-width: 1100px) {
   .project-grid {
     display: grid;
@@ -198,6 +210,10 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
+  body {
+    padding-inline: 1rem;
+    position: relative;
+  }
   .header {
     position: sticky;
     top: 0;
@@ -231,8 +247,24 @@ body {
     display: none;
   }
 
-  .header .navigation {
-    display: none;
+  .header nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -80px;
+    z-index: 2;
+    transition: transform 0.3s;
+  }
+
+  .header nav .navigation {
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    height: 100vh;
+    margin-right: -7.3px;
+  }
+
+  .header nav .navigation-link {
+    padding: 0 1px 0 10px;
   }
 
   .header .hamburger-btn {
@@ -240,6 +272,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
   }
 
   .footer {
@@ -256,8 +289,8 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(45deg) translate(-0.1px, -4.5px);
-    transform-origin: left;
+    transform: translate(0px, 10px) rotate(45deg);
+    transform-origin: center;
   }
 }
 
@@ -277,7 +310,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-45deg) translate(0.1px, 4.5px);
-    transform-origin: left;
+    transform: translate(0px, -10px) rotate(-45deg);
+    transform-origin: center;
   }
 }
