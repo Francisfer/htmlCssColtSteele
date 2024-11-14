@@ -6,5 +6,55 @@
 
 body {
   font-family: sans-serif;
+  color: whitesmoke;
   background-color: #333;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+.toggle {
+  opacity: 0;
+}
+
+.toggle + label {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.toggle + label::before {
+  content: "";
+  background-color: #c6d0cc;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 4.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  transition: background-color 0.3s;
+}
+
+.toggle + label::after {
+  content: "";
+  background-color: #0e1110;
+  position: absolute;
+  top: -27.07%;
+  left: 2.3%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle:checked + label::before {
+  background-color: #20b776;
+}
+
+.toggle:checked + label::after {
+  transform: translateX(100%);
 }
