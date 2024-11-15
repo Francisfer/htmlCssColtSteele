@@ -562,3 +562,48 @@ main {
 }
 
 /* -------------------------- EVENTS-SECTION -------------------------- */
+.virtual-events-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: calc(var(--spacing-xl) * 2);
+}
+
+.virtual-events-section .primary-btn {
+  background-color: var(--purple-1);
+  margin-top: var(--spacing-md);
+}
+.virtual-events-section .primary-btn:hover {
+  background-color: var(--primary-accent);
+}
+
+.swipe-sessions-card {
+  width: 540px;
+  height: 446px;
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
+}
+
+.swipe-sessions-card .card-top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.swipe-sessions-card .card-top::before {
+  content: "";
+  position: absolute;
+  top: -56.6px;
+  left: -140;
+  width: 700px;
+  height: 250px;
+  background-color: var(--purple-1);
+  z-index: -1;
+  transform: rotate(355deg);
+}
+
+/* STOPPED AT POSITIONING THE BEFORE PSEUDO-ELEMENT - CHANGE THE VALUES */
