@@ -465,3 +465,22 @@ main {
 }
 
 /* -------------------------- WHY-SWIPE-SECTION -------------------------- */
+
+.why-swipe-section .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-block: var(--spacing-lg);
+}
+
+.why-swipe-section .card-container .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+}
+
+.why-swipe-section .card-container .card p {
+  font-size: var(--secondary-text-size);
+  color: var(--text-dark);
+}
