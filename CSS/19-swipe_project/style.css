@@ -329,6 +329,13 @@ p {
 
 main {
   margin-block: var(--spacing-xl);
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero p {
@@ -358,6 +365,12 @@ main {
 }
 
 /* -------------------------- PARTNERS SECTION -------------------------- */
+.partners-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .partners-grid img {
   height: 60px;
   place-self: center;
@@ -375,6 +388,9 @@ main {
 
 .unified-platform-section {
   padding-block: var(--spacing-xl);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .unified-platform-section h2 {
@@ -391,6 +407,11 @@ main {
 }
 
 /* -------------------------- GRAPHIC-SECTION -------------------------- */
+.graphic-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .graphic-grid {
   display: grid;
@@ -427,6 +448,9 @@ main {
 .integrations-section {
   color: var(--text-light);
   background-color: var(--primary-accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .integrations-section .col-left .primary-btn {
@@ -465,6 +489,11 @@ main {
 }
 
 /* -------------------------- WHY-SWIPE-SECTION -------------------------- */
+.why-swipe-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .why-swipe-section .card-container {
   display: flex;
@@ -484,3 +513,52 @@ main {
   font-size: var(--secondary-text-size);
   color: var(--text-dark);
 }
+
+/* -------------------------- GLOBAL-SECTION -------------------------- */
+
+.global-section {
+  background-color: var(--primary-accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-light);
+  position: relative;
+  padding-block: calc(var(--spacing-xl) * 2);
+}
+
+.global-section a {
+  color: var(--blue-1);
+}
+
+.global-section a:hover {
+  color: var(--text-light);
+}
+
+.global-section .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-block: calc(var(--spacing-xl) * 2);
+}
+
+.global-section .card-container .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+}
+
+.global-section .card-container .card h3 {
+  border-left: 2px solid var(--blue-1);
+  padding-left: var(--spacing-sm);
+  font-size: 28px;
+}
+
+#globe {
+  max-width: 844px;
+  opacity: 25%;
+  position: absolute;
+  top: 10%;
+}
+
+/* -------------------------- EVENTS-SECTION -------------------------- */
