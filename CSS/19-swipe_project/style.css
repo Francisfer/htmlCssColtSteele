@@ -32,6 +32,16 @@
   --bg-white: #fff;
   --bg-light: #f7f9fc;
 
+  /* Gradients */
+
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #08209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
+
   /* Box-shadows */
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
   /* Spacing */
@@ -569,6 +579,11 @@ main {
   padding-block: calc(var(--spacing-xl) * 2);
 }
 
+.virtual-events-section .col-left {
+  align-self: center;
+  padding-right: var(--spacing-xl);
+}
+
 .virtual-events-section .primary-btn {
   background-color: var(--purple-1);
   margin-top: var(--spacing-md);
@@ -582,6 +597,7 @@ main {
   height: 446px;
   box-shadow: var(--standard-box-shadow);
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .swipe-sessions-card .card-top {
@@ -591,19 +607,55 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
 .swipe-sessions-card .card-top::before {
   content: "";
   position: absolute;
-  top: -56.6px;
-  left: -140;
-  width: 700px;
-  height: 250px;
-  background-color: var(--purple-1);
-  z-index: -1;
-  transform: rotate(355deg);
+  top: -40%;
+  width: 100%;
+  height: 150%;
+  background: var(--primary-gradient);
+  transform: skewY(-5deg);
+  z-index: 1;
 }
 
-/* STOPPED AT POSITIONING THE BEFORE PSEUDO-ELEMENT - CHANGE THE VALUES */
+#sessions-logo {
+  z-index: 2;
+  width: 338px;
+}
+
+.virtual-events-section .avatars {
+  position: absolute;
+  bottom: -70px;
+  left: var(--spacing-xl);
+  z-index: 2;
+}
+
+.virtual-events-section .avatars img {
+  width: 80px;
+}
+
+.virtual-events-section .avatars img:nth-of-type(2) {
+  position: absolute;
+  left: 55px;
+}
+
+.virtual-events-section .card-bottom {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: var(--spacing-xl);
+}
+
+.virtual-events-section .card-bottom .subtitle {
+  margin-top: 32px;
+}
+
+.virtual-events-section .card-bottom .secondary-text {
+  color: var(--text-dark);
+  font-weight: 700;
+  width: 50%;
+}
+
+/* -------------------------- GETTING-STARTED-SECTION -------------------------- */
