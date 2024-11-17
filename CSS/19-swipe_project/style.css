@@ -819,3 +819,22 @@ p {
   color: var(--purple-1);
   text-decoration: underline;
 }
+
+/* -------------------------- Media queries -------------------------- */
+
+/* Media query to add padding-inline to all the containers below 1440px */
+
+@media only screen and (max-width: 1144px) {
+  .section-container {
+    padding-inline: var(--spacing-md);
+  }
+}
+/* Tablet size */
+
+@media only screen and (max-width: 786px) {
+}
+
+/* Mobile size */
+
+@media only screen and (max-width: 550px) {
+}
