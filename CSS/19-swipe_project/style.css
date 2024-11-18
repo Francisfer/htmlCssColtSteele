@@ -895,6 +895,34 @@ p {
     margin: 0;
     margin-block: var(--spacing-md);
   }
+
+  /* Getting started section */
+
+  .getting-started-section .two-column {
+    align-items: center;
+  }
+
+  .getting-started-section .col-left {
+    width: 100%;
+    padding: 0;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .getting-started-section .col-right {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .getting-started-section .col-right .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .getting-started-section .col-right .card .icon {
+    width: 35px;
+    height: auto;
+    margin: 0;
+  }
 }
 
 /* Mobile size */
@@ -972,6 +1000,29 @@ p {
 
   .virtual-events-section .swipe-sessions-card .card-bottom {
     padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  /* Footer section */
+
+  .footer .section-container {
+    flex-wrap: wrap;
+    row-gap: var(--spacing-md);
+  }
+
+  .footer .col {
+    width: 50%;
+  }
+
+  .footer .col a {
+    font-size: 13px;
+  }
+
+  #footer-logo {
+    width: 70px;
+  }
+
+  .footer .col .icon-link img {
+    width: 20px;
   }
 }
 
