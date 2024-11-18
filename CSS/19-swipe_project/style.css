@@ -835,6 +835,16 @@ p {
     width: 100%;
     height: auto;
   }
+
+  .integrations-section .col-left {
+    width: 60%;
+  }
+  .integrations-section .col-left {
+    width: 60%;
+  }
+  .integrations-section .col-right {
+    width: 40%;
+  }
 }
 
 /* Tablet size */
@@ -848,6 +858,16 @@ p {
   /* Unified platform section */
 
   .unified-platform-section h2 {
+    width: 100%;
+  }
+
+  /* Integrations section */
+
+  .integrations-section .card-container {
+    flex-direction: column;
+  }
+
+  .integrations-section .card-container .card {
     width: 100%;
   }
 }
@@ -870,4 +890,19 @@ p {
   .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Integrations section */
+
+  .integrations-section .col-right {
+    display: none;
+  }
+}
+
+/* This was done for the overflowing backgrounds and images because he set fixed widths */
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
