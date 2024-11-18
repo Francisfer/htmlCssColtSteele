@@ -943,6 +943,36 @@ p {
   #globe {
     opacity: 10%;
   }
+
+  /* Virtual events section */
+
+  .virtual-events-section .col-left {
+    padding: 0;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .virtual-events-section .swipe-sessions-card {
+    width: 100%;
+  }
+  .virtual-events-section .swipe-sessions-card {
+    width: 100%;
+  }
+
+  .virtual-events-section .swipe-sessions-card .secondary-text {
+    width: 100%;
+  }
+
+  #sessions-logo {
+    width: 300px;
+  }
+
+  .virtual-events-section .swipe-sessions-card .card-top {
+    height: 40%;
+  }
+
+  .virtual-events-section .swipe-sessions-card .card-bottom {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
 }
 
 /* This was done for the overflowing backgrounds and images because he set fixed widths */
