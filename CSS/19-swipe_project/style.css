@@ -870,6 +870,18 @@ p {
   .integrations-section .card-container .card {
     width: 100%;
   }
+
+  /* Why swipe section */
+
+  .why-swipe-section .card-container {
+    flex-wrap: wrap;
+  }
+
+  .why-swipe-section .card-container .card {
+    width: 50%;
+    margin: 0;
+    padding-block: var(--spacing-md);
+  }
 }
 
 /* Mobile size */
@@ -895,6 +907,17 @@ p {
 
   .integrations-section .col-right {
     display: none;
+  }
+
+  /* Why swipe section */
+
+  .why-swipe-section .card-container .card {
+    width: 100%;
+    padding-block: var(--spacing-sm);
+  }
+
+  .why-swipe-section .card-container .card .icon {
+    height: 35px;
   }
 }
 
