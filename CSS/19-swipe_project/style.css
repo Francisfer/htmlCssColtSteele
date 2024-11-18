@@ -839,17 +839,34 @@ p {
 
 /* Tablet size */
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
   :root {
     --h1-size: 64px;
     --h1-height: 72px;
     --h3-size: 34px;
+  }
+  /* Unified platform section */
+
+  .unified-platform-section h2 {
+    width: 100%;
   }
 }
 
 /* Mobile size */
 
 @media only screen and (max-width: 550px) {
+  .two-column {
+    flex-direction: column;
+  }
+  .two-column .col-left {
+    width: 100%;
+  }
+
+  .two-column .col-right {
+    width: 100%;
+    padding: 0;
+  }
+
   .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
