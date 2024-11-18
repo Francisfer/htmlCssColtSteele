@@ -882,6 +882,19 @@ p {
     margin: 0;
     padding-block: var(--spacing-md);
   }
+
+  /* Global section section */
+
+  .global-section .card-container {
+    flex-wrap: wrap;
+    margin-block: calc(var(--spacing-xl));
+  }
+
+  .global-section .card-container .card {
+    width: 50%;
+    margin: 0;
+    margin-block: var(--spacing-md);
+  }
 }
 
 /* Mobile size */
@@ -918,6 +931,17 @@ p {
 
   .why-swipe-section .card-container .card .icon {
     height: 35px;
+  }
+
+  /* Global section section */
+
+  .global-section .card-container .card {
+    width: 100%;
+    margin-block: var(--spacing-sm);
+  }
+
+  #globe {
+    opacity: 10%;
   }
 }
 
