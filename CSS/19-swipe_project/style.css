@@ -971,6 +971,10 @@ p {
 
   /* Why swipe section */
 
+  .why-swipe-section {
+    padding: var(--spacing-md) 0 var(--spacing-xl) 0;
+  }
+
   .why-swipe-section .card-container {
     flex-wrap: wrap;
   }
@@ -1072,13 +1076,29 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 
+  /* Unified platform section */
+
+  .unified-platform-section {
+    padding-block: var(--spacing-md);
+  }
   /* Integrations section */
 
+  .integrations-section {
+    padding-block: var(--spacing-lg);
+  }
+
+  .integrations-section::before {
+    height: 900px;
+  }
   .integrations-section .col-right {
     display: none;
   }
 
   /* Why swipe section */
+
+  .why-swipe-section {
+    padding: var(--spacing-xl) 0 var(--spacing-md) 0;
+  }
 
   .why-swipe-section .card-container .card {
     width: 100%;
@@ -1091,6 +1111,14 @@ p {
 
   /* Global section section */
 
+  .global-section {
+    padding-top: var(--spacing-xl);
+  }
+
+  .global-section .card-container {
+    margin-block: var(--spacing-md);
+  }
+
   .global-section .card-container .card {
     width: 100%;
     margin-block: var(--spacing-sm);
@@ -1101,6 +1129,10 @@ p {
   }
 
   /* Virtual events section */
+
+  .virtual-events-section {
+    padding: 0;
+  }
 
   .virtual-events-section .col-left {
     padding: 0;
@@ -1130,6 +1162,11 @@ p {
     padding: var(--spacing-xl) var(--spacing-lg);
   }
 
+  /* Getting started section */
+
+  .getting-started-section {
+    padding-block: var(--spacing-lg);
+  }
   /* Footer section */
 
   .footer .section-container {
