@@ -43,9 +43,10 @@
   );
 
   /* Box-shadows */
-  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
-  /* Spacing */
 
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+
+  /* Spacing */
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 32px;
@@ -56,10 +57,21 @@
   --standard-width: 1144px;
 }
 
+/* General element styles */
+
+/* This was done for the overflowing backgrounds and images because he set fixed widths */
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Rest of general element styles */
 body {
   font-family: var(--body-font);
   color: var(--text-dark);
-  width: 100%;
   margin: 0;
   box-sizing: border-box;
   padding-top: var(--spacing-sm);
@@ -404,10 +416,6 @@ p {
   justify-content: center;
 }
 
-.partners-grid img {
-  height: 60px;
-  place-self: center;
-}
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -415,6 +423,11 @@ p {
   margin-block: var(--spacing-xl);
   column-gap: var(--spacing-md);
   row-gap: var(--spacing-lg);
+}
+
+.partners-grid img {
+  height: 60px;
+  place-self: center;
 }
 
 /* -------------------------- UNIFIED PLATFORM SECTION -------------------------- */
@@ -514,6 +527,15 @@ p {
   background-color: var(--bg-light);
 }
 
+.integrations-section .card-container {
+  display: flex;
+  margin-block: var(--spacing-lg);
+}
+
+.integrations-section .card-container .card {
+  width: 50%;
+}
+
 .integrations-section .col-left .primary-btn {
   background-color: var(--blue-1);
   color: var(--primary-accent);
@@ -522,15 +544,6 @@ p {
 
 .integrations-section .col-left .primary-btn:hover {
   background-color: var(--bg-light);
-}
-
-.integrations-section .card-container {
-  display: flex;
-  margin-block: var(--spacing-lg);
-}
-
-.integrations-section .card-container .card {
-  width: 50%;
 }
 
 .integrations-section .card .secondary-btn {
@@ -633,7 +646,7 @@ p {
   top: 10%;
 }
 
-/* -------------------------- EVENTS-SECTION -------------------------- */
+/* -------------------------- VIRTUAL-EVENTS-SECTION -------------------------- */
 .virtual-events-section {
   width: 100%;
   display: flex;
@@ -666,7 +679,7 @@ p {
   background-color: var(--primary-accent);
 }
 
-.swipe-sessions-card {
+.virtual-events-section .col-right .swipe-sessions-card {
   width: 540px;
   height: 446px;
   box-shadow: var(--standard-box-shadow);
@@ -832,15 +845,17 @@ p {
 /* Media query to add padding-inline to all the containers below 1440px */
 
 @media only screen and (max-width: 1144px) {
-  .section-container {
-    padding-inline: var(--spacing-md);
-  }
-
   :root {
     --h1-size: 80px;
     --h1-height: 85px;
   }
 
+  /* General layout */
+  .section-container {
+    padding-inline: var(--spacing-md);
+  }
+
+  /* Hero section */
   .hero .hero-phone {
     height: 550px;
     transform: translateY(-60px);
@@ -855,12 +870,12 @@ p {
 }
 
 @media only screen and (max-width: 850px) {
-  /* Hero section */
   :root {
     --h1-size: 70px;
     --h1-height: 85px;
   }
 
+  /* Hero section */
   .hero .hero-phone {
     transform: translateY(-85px);
   }
@@ -875,9 +890,7 @@ p {
   .integrations-section .col-left {
     width: 60%;
   }
-  .integrations-section .col-left {
-    width: 60%;
-  }
+
   .integrations-section .col-right {
     width: 40%;
   }
@@ -925,73 +938,62 @@ p {
   }
 
   /* Main element */
-
   main {
     margin-top: 0;
   }
 
   /* Hero section */
-
   #gradient-canvas {
     height: 820px;
   }
 
   /* Hero */
-
   .hero .two-column {
     align-items: center;
   }
   .hero .col-left {
     width: 60%;
   }
-
   .hero .col-right {
     width: 40%;
   }
-
   .hero .hero-phone {
     height: 450px;
     transform: translateX(32px);
   }
-  /* Unified platform section */
 
+  /* Unified platform section */
   .unified-platform-section h2 {
     width: 100%;
   }
 
   /* Integrations section */
-
   .integrations-section .card-container {
     flex-direction: column;
   }
-
   .integrations-section .card-container .card {
     width: 100%;
   }
 
   /* Why swipe section */
-
   .why-swipe-section {
     padding: var(--spacing-md) 0 var(--spacing-xl) 0;
   }
-
   .why-swipe-section .card-container {
     flex-wrap: wrap;
   }
-
   .why-swipe-section .card-container .card {
     width: 50%;
     margin: 0;
     padding-block: var(--spacing-md);
   }
 
-  /* Global section section */
+  /* Global section */
 
   .global-section .card-container {
     flex-wrap: wrap;
     margin-block: calc(var(--spacing-xl));
   }
-
   .global-section .card-container .card {
     width: 50%;
     margin: 0;
@@ -999,27 +1001,23 @@ p {
   }
 
   /* Getting started section */
-
   .getting-started-section .two-column {
     align-items: center;
   }
-
   .getting-started-section .col-left {
     width: 100%;
     padding: 0;
     margin-bottom: var(--spacing-lg);
   }
-
   .getting-started-section .col-right {
     flex-direction: column;
     gap: var(--spacing-md);
+    flex-wrap: wrap;
   }
-
   .getting-started-section .col-right .card {
     width: 100%;
     margin: 0;
   }
-
   .getting-started-section .col-right .card .icon {
     width: 35px;
     height: auto;
@@ -1035,6 +1033,7 @@ p {
     --h1-height: 60px;
   }
 
+  /* General styles */
   .two-column {
     flex-direction: column;
   }
@@ -1046,16 +1045,14 @@ p {
     width: 100%;
     padding: 0;
   }
+  main {
+    margin-top: var(--spacing-md);
+  }
 
   /* Navbar */
 
   .navbar {
     margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
-  }
-  /* Main element */
-
-  main {
-    margin-top: var(--spacing-md);
   }
 
   /* Hero section */
@@ -1072,17 +1069,17 @@ p {
     display: none;
   }
 
+  /* Partners Grid */
   .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   /* Unified platform section */
-
   .unified-platform-section {
     padding-block: var(--spacing-md);
   }
-  /* Integrations section */
 
+  /* Integrations section */
   .integrations-section {
     padding-block: var(--spacing-lg);
   }
@@ -1167,8 +1164,8 @@ p {
   .getting-started-section {
     padding-block: var(--spacing-lg);
   }
-  /* Footer section */
 
+  /* Footer section */
   .footer .section-container {
     flex-wrap: wrap;
     row-gap: var(--spacing-md);
@@ -1189,13 +1186,4 @@ p {
   .footer .col .icon-link img {
     width: 20px;
   }
-}
-
-/* This was done for the overflowing backgrounds and images because he set fixed widths */
-
-html,
-body {
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
 }
