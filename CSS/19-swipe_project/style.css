@@ -46,6 +46,11 @@
 
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 
+  /* Border-radius */
+
+  --border-radius-standard: 20px;
+  --border-radius-sm: 16px;
+
   /* Spacing */
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -211,7 +216,7 @@ p {
   letter-spacing: 1.25px;
   font-weight: 700;
   border: none;
-  border-radius: 20px;
+  border-radius: var(--border-radius-standard);
   color: var(--text-light);
   background-color: var(--primary-accent);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -230,7 +235,7 @@ p {
   letter-spacing: 1.25px;
   font-weight: 700;
   border: none;
-  border-radius: 20px;
+  border-radius: var(--border-radius-standard);
   color: var(--primary-accent);
   background-color: transparent;
   cursor: pointer;
@@ -473,9 +478,11 @@ p {
 
 #credit-card {
   grid-area: card;
+  box-shadow: var(--standard-box-shadow);
 }
 #slack-invoice {
   grid-area: slack;
+  box-shadow: var(--standard-box-shadow);
 }
 #phone {
   grid-area: phone;
@@ -483,12 +490,13 @@ p {
 
 #dash {
   grid-area: dash;
+  box-shadow: var(--standard-box-shadow);
 }
 
 .graphic-grid img {
   display: block;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
+  border-radius: var(--border-radius-sm);
 }
 
 /* -------------------------- INTEGRATIONS-SECTION -------------------------- */
@@ -553,12 +561,11 @@ p {
 #api-code {
   max-width: 470px;
   margin-bottom: var(--spacing-md);
-  border-radius: 20px;
+  border-radius: var(--border-radius-standard);
 }
 #terminal-code {
   max-width: 470px;
-
-  border-radius: 20px;
+  border-radius: var(--border-radius-standard);
 }
 
 /* -------------------------- WHY-SWIPE-SECTION -------------------------- */
@@ -683,7 +690,7 @@ p {
   width: 540px;
   height: 446px;
   box-shadow: var(--standard-box-shadow);
-  border-radius: 20px;
+  border-radius: var(--border-radius-standard);
   overflow: hidden;
 }
 
@@ -867,6 +874,15 @@ p {
   .hero .col-right {
     width: 40%;
   }
+
+  /* Partners section */
+  .partners-section {
+    margin-top: -60px;
+  }
+
+  .partners-section .partners-grid {
+    margin-bottom: var(--spacing-xl);
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -923,7 +939,7 @@ p {
     width: 50px;
     height: 30px;
     background-color: rgba(250, 250, 250, 0.25);
-    border-radius: 20px;
+    border-radius: var(--border-radius-standard);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1069,7 +1085,10 @@ p {
     display: none;
   }
 
-  /* Partners Grid */
+  /* Partners section */
+  .partners-section {
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+  }
   .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
