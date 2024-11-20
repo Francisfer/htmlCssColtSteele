@@ -828,14 +828,43 @@ p {
   .section-container {
     padding-inline: var(--spacing-md);
   }
+
+  :root {
+    --h1-size: 80px;
+    --h1-height: 85px;
+  }
+
+  .hero .hero-phone {
+    height: 550px;
+    transform: translateY(-60px);
+  }
+
+  .hero .col-left {
+    width: 60%;
+  }
+  .hero .col-right {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 850px) {
+  /* Hero section */
+  :root {
+    --h1-size: 70px;
+    --h1-height: 85px;
+  }
+
+  .hero .hero-phone {
+    transform: translateY(-85px);
+  }
+
+  /* Partners Grid */
   .partners-grid img {
     width: 100%;
     height: auto;
   }
 
+  /* Integrations Section */
   .integrations-section .col-left {
     width: 60%;
   }
@@ -1100,5 +1129,3 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-/* MINUTE  12 */
