@@ -311,10 +311,13 @@ p {
 /* -------------------------- NAVBAR -------------------------- */
 
 .navbar {
-  padding: 0 var(--spacing-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--standard-width);
+  padding: 0 var(--spacing-md);
   margin-bottom: var(--spacing-xl);
 }
 
@@ -323,6 +326,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .menu a {
@@ -888,9 +892,14 @@ p {
 
   /* Navbar */
 
-  .navbar {
-    margin-bottom: 0;
+  .navbar .menu {
+    display: none;
   }
+
+  .navbar .navbar-btn {
+    display: none;
+  }
+
   /* Main element */
 
   main {
@@ -904,6 +913,9 @@ p {
   }
 
   /* Hero */
+  .navbar {
+    margin-bottom: 0;
+  }
 
   .hero .two-column {
     align-items: center;
